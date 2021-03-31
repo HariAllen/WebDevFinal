@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buy Our Stuff!</title>
+    <style media="screen">
+    body {background-color: powderblue;}
+    header   {color: blue; font-family: "Papyrus";}
+    p, summary    {color: red; font-family: "Cursive", Lucida;}
+    </style>
+</head>
+<body>
+  <header>
+    Checkout Menu
+  </header>
+  <p id="list1" style="display:none">You ordered the Cat!</p>
+  <p id="list2" style="display:none">You ordered the Firetruck!</p>
+  <p id="list3" style="display:none">You ordered the Telescope!</p>
+  <p id="list4" style="display:none">You ordered the Phone!</p>
+  <p id="list5" style="display:none">You ordered the Tree!</p>
+
+
+  <details>
+    <summary>Proceed to Checkout?</summary>
+    <p>Transection has been processed!</p>
+  </details>
+
+  <script type="text/javascript">
+    let Cat = sessionStorage.getItem("Cat");
+    let Tree = sessionStorage.getItem("Tree");
+    let Phone = sessionStorage.getItem("Phone");
+    let Telescope = sessionStorage.getItem("Telescope");
+    let Firetruck = sessionStorage.getItem("Firetruck");
+
+    if (Cat == true){
+      document.getElementById(list1).innerHTML.display = "block";
+
+    }
+
+    if (Firetruck == true){
+      list2.style.display = "block";
+    }
+
+    if (Telescope == true){
+      list3.style.display = "block";
+    }
+
+    if (Phone == true){
+      list4.style.display = "block";
+    }
+
+    if (Tree == true){
+      list5.style.display = "block";
+    }
+
+  </script>
+</body>
+</html>

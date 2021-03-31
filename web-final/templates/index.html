@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buy Our Stuff!</title>
+    <style media="screen">
+    body {background-color: #90ee90;}
+    header   {color: blue; font-family: "Times New Roman", Times, serif;}
+    p    {color: red; font-family: "Cursive", Lucida;}
+    div {display: flex; font-family: "Papyrus";}
+    </style>
+</head>
+<body>
+
+  <header>
+    Welcome to "Buy Our Stuff!"
+  </header>
+
+  <div>
+    <img src="/Users/heallen201/web-final/static/Cat.jpeg" width="200" height="200"/>
+    <figcaption>A cat</figcaption>
+    <input type="checkbox" id="CatBox" onclick="myFunction()"/>
+    <p id="text1" style="display:none">Added to Cart</p>
+  </div>
+
+  <div>
+    <img src="/Users/heallen201/web-final/static/Firetruck.jpeg" width="200" height="200"/>
+    <figcaption>A firetruck</figcaption>
+    <input type="checkbox" id="FiretruckBox" onclick="myFunction()"/>
+    <p id="text2" style="display:none">Added to Cart</p>
+  </div>
+
+  <div>
+    <img src="/Users/heallen201/web-final/static/Telescope.jpeg" width="200" height="200"/>
+    <figcaption>A telescope</figcaption>
+    <input type="checkbox" id="TelescopeBox" onclick="myFunction()"/>
+    <p id="text3" style="display:none">Added to Cart</p>
+  </div>
+
+  <div>
+    <img src="/Users/heallen201/web-final/static/Phone.jpeg" width="200" height="200"/>
+    <figcaption>A phone</figcaption>
+    <input type="checkbox" id="PhoneBox" onclick="myFunction()"/>
+    <p id="text4" style="display:none">Added to Cart</p>
+  </div>
+
+  <div>
+    <img src="/Users/heallen201/web-final/static/Tree.jpeg" width="200" height="200"/>
+    <figcaption>A tree</figcaption>
+    <input type="checkbox" id="TreeBox" onclick="myFunction()"/>
+    <p id="text5" style="display:none">Added to Cart</p>
+  </div>
+
+    <p>
+      <a href="/Users/heallen201/web-final/templates/index2.html">Proceed to Checkout</a>
+    </p>
+
+
+<script type="text/javascript">
+
+
+  function myFunction() {
+
+    let Cat;
+    let Tree;
+    let Phone;
+    let Telescope;
+    let Firetruck;
+
+    var CatBox = document.getElementById("CatBox");
+    var TreeBox = document.getElementById("TreeBox");
+    var PhoneBox = document.getElementById("PhoneBox");
+    var TelescopeBox = document.getElementById("TelescopeBox");
+    var FiretruckBox = document.getElementById("FiretruckBox");
+
+
+    var text = document.getElementById("text");
+
+    if (CatBox.checked == true){
+      text1.style.display = "block";
+      Cat = true;
+    } else {
+      text1.style.display = "none";
+      Cat = false;
+    }
+
+    if (TreeBox.checked == true){
+      text5.style.display = "block";
+      Tree = true;
+    } else {
+      text5.style.display = "none";
+      Tree = false;
+    }
+
+    if (PhoneBox.checked == true){
+      text4.style.display = "block";
+      Phone = true;
+    } else {
+      text4.style.display = "none";
+      Phone = false;
+    }
+
+    if (TelescopeBox.checked == true){
+      text3.style.display = "block";
+      Telescope = true;
+    } else {
+      text3.style.display = "none";
+      Telescope = false;
+    }
+
+    if (FiretruckBox.checked == true){
+      text2.style.display = "block";
+      Firetruck = true;
+    } else {
+      text2.style.display = "none";
+      Firetruck = false;
+    }
+
+  }
+  sessionStorage.setItem("Cat", Cat);
+  sessionStorage.setItem("Tree", Tree);
+  sessionStorage.setItem("Phone", Phone);
+  sessionStorage.setItem("Telescope", Cat);
+  sessionStorage.setItem("Firetruck", Cat);
+
+
+
+</script>
+
+</body>
+</html>
